@@ -1,0 +1,51 @@
+---
+import Navbar from "../components/commons/Navbar.astro";
+import Footer from "../components/commons/Footer.astro";
+import WhatsappButton from "../components/commons/Whatsapp_button.astro";
+import "../styles/global.css";
+
+const { title = "Jardín Infantil" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <!-- 🔤 UTF-8 (IMPORTANTE) -->
+    <meta charset="UTF-8" />
+
+    <!-- 📱 Responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 🏷️ SEO básico -->
+    <title>{title}</title>
+    <meta name="description" content="Jardín infantil inclusivo" />
+
+    <!-- 🎨 Favicon (opcional) -->
+    <link rel="icon" href="/favicon.ico" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="bg-bg text-text font-body h-screen">
+    <Navbar />
+    <main class="relative overflow-hidden">
+      <!-- Imagen de fondo -->
+      <div
+        class="bg-[url('/bg_clips.png')] md:bg-[url('/bg_clips.png  ')]
+        fixed inset-0 -z-10 bg-repeat opacity-10"
+        aria-hidden="true"
+      >
+      </div>
+      <!-- Contenido -->
+      <div class="relative z-10">
+        <slot />
+      </div>
+    </main>
+    <Footer />
+    <!-- Boton whatsapp -->
+    <WhatsappButton />
+  </body>
+</html>

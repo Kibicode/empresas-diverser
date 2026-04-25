@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Open+Sans:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+
+@theme {
+   /* 🎨 Primary (Azul principal) */
+  --color-primary: #4CB7BE;
+  --color-primary-600: #3AA3AA;
+  --color-primary-400: #6ECAD0;
+
+  /* 🌈 Secondary (Acentos) */
+  --color-accent-yellow: #F2D34F;
+  --color-accent-yellow-light: #F7E27A;
+
+  --color-accent-pink: #F48A9A;
+  --color-accent-pink-light: #F7A7B3;
+
+   /* ✅ Success (Verde) */
+  --color-success: #5FC2A7;
+  --color-success-600: #49A892;
+  --color-success-400: #7ED6BF;
+
+  /* ❌ Error (Rojo) */
+  --color-error: #E57373;
+  --color-error-600: #D65C5C;
+  --color-error-400: #F09595;
+
+  /* 🧩 Neutrals */
+  --color-bg: #F4F7F6;
+  --color-surface: #EAEAEA;
+  --color-text: #2B2B2B;
+
+  /* Fonts */
+  /* Nunito Sans */
+  --font-heading: "Nunito Sans", sans-serif;
+  /* Open Sans */
+  --font-body: "Open Sans", sans-serif;
+
+  /* Border radius */
+  --radius: 0.25rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-full: 9999px;
+  
+}
+
+body {
+  font-family: var(--font-heading);
+}

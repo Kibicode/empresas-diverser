@@ -1,0 +1,31 @@
+---
+import TestimonialCard from "../TestimonialCard.astro";
+
+import {testimoniales} from "../../../data/home"
+---
+
+<section class="bg-bg py-20">
+  <div class="max-w-6xl mx-auto px-6 text-center">
+
+    <!-- Título -->
+    <h2 class="text-3xl md:text-4xl font-heading text-primary font-bold">
+      Lo que dicen las familias
+    </h2>
+
+    <p class="mt-4 text-text/80 max-w-2xl mx-auto">
+      La confianza de los padres es nuestro mayor respaldo.
+    </p>
+
+    <!-- Grid -->
+    <div class="mt-16 grid gap-10 md:grid-cols-3">
+      {testimoniales.map((testimonial, i) =>{
+       return <TestimonialCard calificacion={testimonial.calificacion} nombre={testimonial.nombre} comentario={testimonial.comentario} titulo={testimonial.titulo} index={i}></TestimonialCard>
+      }) }
+
+      
+    </div>
+
+    </div>
+
+  </div>
+</section>

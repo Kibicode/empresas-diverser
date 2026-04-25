@@ -1,0 +1,137 @@
+---
+import { colors } from "../../data";
+import { actividades, programas } from "../../data/programas";
+import Paperclip from "../commons/Paperclip.astro";
+
+---
+
+<!-- ===================== -->
+<!-- 🎓 PROGRAMAS -->
+<!-- ===================== -->
+<section class="bg-white py-24">
+
+  <div class="max-w-6xl mx-auto px-6">
+
+    <!-- HEADER -->
+    <div class="text-center max-w-2xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-heading text-primary font-bold">
+        Nuestros programas
+      </h2>
+
+      <p class="mt-4 text-text/80">
+        Cada etapa está diseñada para acompañar el crecimiento integral de los niños.
+      </p>
+    </div>
+
+    <!-- ZIG-ZAG -->
+    <div class="mt-20 space-y-24">
+
+      {
+        programas.map((item, i) => {
+          const reverse = i % 2 !== 0;
+
+          return (
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+
+              <!-- IMAGEN -->
+              <div class={`relative group ${reverse ? "md:order-2" : ""}`}>
+
+                <Paperclip index={i}></Paperclip>
+
+                <img src={item.imagen}
+                     class="rounded-3xl shadow-xl w-full h-[380px] object-cover group-hover:scale-105 transition"/>
+
+              </div>
+
+              <!-- TEXTO -->
+              <div class={`${reverse ? "md:order-1" : ""}`}>
+
+                <p class={`text-sm ${item.color} font-semibold`}>
+                  {item.subtitulo}
+                </p>
+
+                <h3 class="text-2xl md:text-3xl font-bold mt-2">
+                  {item.titulo}
+                </h3>
+
+                <p class="mt-4 text-text/80">
+                  {item.descripcion}
+                </p>
+
+                <ul class="mt-6 space-y-3 text-sm text-text/70">
+                  {item.bullets.map((b) => (
+                    <li class="flex gap-2">
+                      <span class={`w-2 h-2 rounded-full ${item.bgcolor}`}></span>
+                      {b}
+                    </li>
+                  ))}
+                </ul>
+
+              </div>
+
+            </div>
+          );
+        })
+      }
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ===================== -->
+<!-- 🎨 EXTRACURRICULARES -->
+<!-- ===================== -->
+<section class="bg-bg py-24">
+
+  <div class="max-w-6xl mx-auto px-6">
+
+    <!-- HEADER -->
+    <div class="text-center max-w-2xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-heading text-primary font-bold">
+        Actividades extracurriculares
+      </h2>
+
+      <p class="mt-4 text-text/80">
+        Después de la jornada, abrimos espacios donde los niños exploran, crean y desarrollan nuevas habilidades a su propio ritmo.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-12 mt-16">
+  {
+    actividades.map((obj, i) => (
+      <div class="relative group bg-bg rounded-2xl p-6 my-2 shadow-sm 
+                  hover:shadow-lg transition-all duration-300">
+
+        <Paperclip index={i%4}></Paperclip>
+
+        <div class="flex items-start gap-4">
+
+          <div class={`w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center`}
+          style={`color:${colors[i%4]}`}>
+            <span class="material-symbols-outlined text-xl">
+              {obj.icono}
+            </span>
+          </div>
+
+          <div>
+            <h3 class="font-semibold text-text">
+              {obj.titulo}
+            </h3>
+
+            <p class="mt-2 text-sm text-text/70 leading-relaxed">
+              {obj.descripcion}
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    ))
+  }
+</div>
+
+  </div>
+
+</section>

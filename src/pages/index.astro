@@ -1,17 +1,23 @@
 ---
 
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+import { homeData } from "../data/index";
+import Cta from "../components/pages/index/Cta.astro";
+import Diff from "../components/pages/index/Diff.astro";
+import Gallery from "../components/pages/index/Gallery.astro";
+import Hero from "../components/pages/index/Hero.astro";
+import Programs from "../components/pages/index/Programs.astro";
+import Testimonials from "../components/pages/index/Testimonials.astro";
+
+
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout>
+  <Hero {...homeData.hero} />
+  <Diff></Diff>
+  <Programs items={homeData.programs} />
+  <Testimonials ></Testimonials>
+  <Gallery></Gallery>
+  <Cta/>
+</BaseLayout>

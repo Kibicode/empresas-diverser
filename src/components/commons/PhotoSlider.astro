@@ -1,0 +1,72 @@
+---
+import { Swiper, SwiperWrapper, SwiperSlide } from "astro-swiper";
+import Paperclip from "./Paperclip.astro";
+
+const { imagenes, classes, duration = 2000 } = Astro.props;
+
+function chunkArray(arr: string[], size: number) {
+  const result = [];
+  for (let i = 0; i < arr.length; i += size) {
+    result.push(arr.slice(i, i + size));
+  }
+  return result;
+}
+
+const groupSize = imagenes.length >= 12 ? 6 : 4;
+const grupos = chunkArray(imagenes, groupSize);
+---
+
+<Swiper
+  class={classes}
+  options={{
+    autoplay: {
+      delay: Number(duration),
+      disableOnInteraction: false,
+    },
+    loop: true,
+    slidesPerView: 1,
+    effect: 'fade',
+    fadeEffect:{
+      crossFade: true,
+    }
+  }}
+>
+  <SwiperWrapper>
+    {
+      grupos.map((grupo, slideIndex) => (
+        <SwiperSlide>
+          <!-- GRID DINÁMICO -->
+          <div class={`grid gap-6 p-6 justify-items-center
+            ${grupo.length === 4 ? "grid-cols-2" : "grid-cols-2 md:grid-cols-3"}
+          `}>
+            {
+              grupo.map((imagen, i) => {
+                const index = slideIndex * groupSize + i;
+                return (
+                  <div
+                    class={`relative bg-white p-2 md:p-4 m-4 rounded-lg shadow-lg
+                    ${index % 2 === 0 ? "rotate-[-5deg]" : "rotate-[5deg]"}
+                    hover:rotate-0 hover:scale-105 transition`}
+                  >
+                    <!-- 📎 CLIP -->
+                    <Paperclip
+                      index={index%4}
+                      rotate={index % 2 === 0 ? "-rotate-6" : "rotate-6"}
+                    />
+                    <!-- 🖼️ IMG -->
+                    <img
+                      src={imagen}
+                      class="w-56 h-40 md:w-64 md:h-52 object-cover rounded-md"
+                      loading="lazy"
+                    />
+                  </div>
+                );
+              })
+            }
+          </div>
+        </SwiperSlide>
+      ))
+    }
+
+  </SwiperWrapper>
+</Swiper>

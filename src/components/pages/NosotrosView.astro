@@ -1,0 +1,296 @@
+---
+import { data } from "../../data/nosotros";
+import Paperclip from "../commons/Paperclip.astro";
+
+---
+
+<section class="bg-bg">
+  <!-- HERO -->
+  <div
+    class="relative h-[60vh] flex items-center justify-center text-center overflow-hidden"
+  >
+    <img
+      src={data.hero.image}
+      class="absolute inset-0 w-full h-full object-cover opacity-30"
+    />
+
+    <div class="absolute inset-0 bg-white/70 backdrop-blur-sm"></div>
+
+    <div class="relative max-w-2xl px-6">
+      <h1 class="text-4xl md:text-5xl font-heading text-primary font-bold">
+        {data.hero.title}
+      </h1>
+
+      <p class="mt-6 text-text/80 text-lg">
+        {data.hero.subtitle}
+      </p>
+    </div>
+  </div>
+
+  <!-- CALIDAD -->
+  <section class="py-20">
+    <div
+      class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-12"
+    >
+      <!-- 📝 TEXTO -->
+      <div class={`w-full md:w-1/2 ${1 % 2 !== 0 ? "md:order-2" : ""}`}>
+        <h2 class="text-3xl md:text-4xl font-heading text-primary font-bold">
+          Nuestra esencia
+        </h2>
+
+        <p class="mt-6 text-text/80 leading-relaxed">
+          {data.calidad}
+        </p>
+      </div>
+
+      <!-- 🖼️ IMAGEN -->
+      <div
+        class={`w-full md:w-1/2 relative group ${1 % 2 !== 0 ? "md:order-1" : ""}`}
+      >
+        <!-- 📎 CLIP -->
+        <Paperclip index="0"></Paperclip>
+
+        <!-- Imagen -->
+        <img
+          src={`item.imagen`}
+          alt={``}
+          class="rounded-3xl shadow-xl
+                   w-full h-[320px] md:h-[420px] object-cover
+                   group-hover:scale-105 transition duration-500"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </section>
+  <!-- MISION -->
+  <section class="py-20">
+    <div
+      class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-12"
+    >
+      <!-- 📝 TEXTO -->
+      <div class={`w-full md:w-1/2 ${2 % 2 !== 0 ? "md:order-2" : ""}`}>
+        <h2 class="text-3xl md:text-4xl font-heading text-primary font-bold">
+          Nuestra mision
+        </h2>
+
+        <p class="mt-6 text-text/80 leading-relaxed">
+          {data.mision}
+        </p>
+      </div>
+
+      <!-- 🖼️ IMAGEN -->
+      <div
+        class={`w-full md:w-1/2 relative group ${2 % 2 !== 0 ? "md:order-1" : ""}`}
+      >
+        <!-- 📎 CLIP -->
+        <Paperclip index="1"></Paperclip>
+
+        <!-- Imagen -->
+        <img
+          src={`item.imagen`}
+          alt={``}
+          class="rounded-3xl shadow-xl
+                   w-full h-[320px] md:h-[420px] object-cover
+                   group-hover:scale-105 transition duration-500"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </section>
+  <!-- VISIOn -->
+  <section class="py-20">
+    <div
+      class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-12"
+    >
+      <!-- 📝 TEXTO -->
+      <div class={`w-full md:w-1/2 ${1 % 2 !== 0 ? "md:order-2" : ""}`}>
+        <h2 class="text-3xl md:text-4xl font-heading text-primary font-bold">
+          Nuestra vision
+        </h2>
+
+        <p class="mt-6 text-text/80 leading-relaxed">
+          {data.vision}
+        </p>
+      </div>
+
+      <!-- 🖼️ IMAGEN -->
+      <div
+        class={`w-full md:w-1/2 relative group ${1 % 2 !== 0 ? "md:order-1" : ""}`}
+      >
+        <!-- 📎 CLIP -->
+        <!-- 📎 CLIP -->
+        <Paperclip index="2"></Paperclip>
+
+        <!-- Imagen -->
+        <img
+          src={`item.imagen`}
+          alt={``}
+          class="rounded-3xl shadow-xl
+                   w-full h-[320px] md:h-[420px] object-cover
+                   group-hover:scale-105 transition duration-500"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- DIVIDER -->
+  <div
+    class="h-[1px] bg-gradient-to-r from-transparent via-primary/20 to-transparent my-10"
+  >
+  </div>
+
+  <section class="py-24 bg-white">
+  <div class="max-w-6xl mx-auto px-6">
+
+    <!-- Header -->
+    <div class="text-center max-w-2xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-heading text-primary font-bold">
+        Nuestros objetivos
+      </h2>
+
+      <p class="mt-4 text-text/70">
+        Cada acción que tomamos tiene un propósito claro: acompañar el desarrollo integral de nuestros niños desde la inclusión, el respeto y la calidad educativa.
+      </p>
+    </div>
+
+    <!-- Grid -->
+    <div class="mt-16 grid gap-8 md:grid-cols-2">
+
+      {
+        data.objetivos.map((obj, i) => (
+          <div class="relative group bg-bg rounded-2xl p-6 shadow-sm 
+                      hover:shadow-lg transition-all duration-300">
+
+            <!-- Clip sutil -->
+            <div class="absolute -top-4 left-6 w-8 h-10 text-primary/60 rotate-6 opacity-70">
+              <svg class="w-full h-full" fill="none" stroke="currentColor"
+                stroke-width="1.5" viewBox="0 0 24 24">
+                <path d="M21.44 11.05l-9.19 9.19a6 6 0 01-8.49-8.49l9.19-9.19a4 4 0 015.66 5.66l-9.2 9.19a2 2 0 01-2.83-2.83l8.49-8.48"/>
+              </svg>
+            </div>
+
+            <!-- Contenido -->
+            <div class="flex items-start gap-4">
+
+              <!-- Icono -->
+              <div class="w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+                <span class="material-symbols-outlined text-xl">
+                  {obj.icono}
+                </span>
+              </div>
+
+              <!-- Texto -->
+              <div>
+                <h3 class="font-semibold text-text">
+                  {obj.titulo}
+                </h3>
+
+                <p class="mt-2 text-sm text-text/70 leading-relaxed">
+                  {obj.descripcion}
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+        ))
+      }
+
+    </div>
+
+  </div>
+</section>
+<section class="pt-24 bg-bg">
+  <div class="max-w-6xl mx-auto px-6">
+
+    <!-- Header -->
+    <div class="text-center max-w-2xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-heading text-primary font-bold">
+        Lo que nos define
+      </h2>
+
+      <p class="mt-4 text-text/70">
+        Nuestros valores guían cada experiencia de aprendizaje, creando un entorno donde cada niño se siente respetado, acompañado y motivado a crecer.
+      </p>
+    </div>
+
+    <!-- Grid -->
+    <div class="mt-16 flex flex-wrap justify-center gap-8">
+
+      {
+        data.valores.map((valor, i) => (
+          <div class={`relative group px-6 py-4 rounded-2xl shadow-md 
+                       flex items-center gap-3 bg-white
+                       ${i % 2 === 0 ? "rotate-[-3deg]" : "rotate-[3deg]"}
+                       hover:rotate-0 hover:-translate-y-1 hover:shadow-xl
+                       transition-all duration-300`}>
+
+            <!-- Clip -->
+            <div class={`absolute -top-4 left-1/2 -translate-x-1/2 
+                        w-7 h-10 ${valor.color}`}>
+              <svg class="w-full h-full" fill="none" stroke="currentColor"
+                stroke-width="1.5" viewBox="0 0 24 24">
+                <path d="M21.44 11.05l-9.19 9.19a6 6 0 01-8.49-8.49l9.19-9.19a4 4 0 015.66 5.66l-9.2 9.19a2 2 0 01-2.83-2.83l8.49-8.48"/>
+              </svg>
+            </div>
+
+            <!-- Icono -->
+            <div class={`w-10 h-10 rounded-xl flex items-center justify-center ${valor.background} ${valor.color} `}>
+              <span class="material-symbols-outlined text-lg">
+                {valor.icono}
+              </span>
+            </div>
+
+            <!-- Texto -->
+            <span class="font-medium text-text">
+              {valor.nombre}
+            </span>
+
+          </div>
+        ))
+      }
+
+    </div>
+
+  </div>
+</section>
+
+  <!-- EQUIPO -->
+  <div class="py-20 max-w-6xl mx-auto px-6 text-center">
+    <h2 class="text-3xl font-heading text-primary font-bold">Nuestro equipo</h2>
+
+    <div class="mt-12 grid md:grid-cols-3 gap-10">
+      {
+        data.personal.map((persona, i) => (
+          <div class="group">
+            <img
+              src={persona.foto}
+              class="w-64 h-64 mx-auto shadow-md object-cover"
+            />
+            <h3 class="mt-4 font-bold">{persona.nombre}</h3>
+            <p class="text-sm text-text/60">{persona.cargo}</p>
+            <p class="text-xs text-text/60">{persona.experiencia}</p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+
+  <!-- CTA FINAL -->
+  <div class="py-20 bg-primary text-center text-white">
+    <h2 class="text-2xl font-semibold">¿Quieres conocer nuestro jardín?</h2>
+
+    <p class="mt-4 text-white/80">
+      Agenda una visita y descubre un espacio donde tu hijo aprenderá feliz y
+      seguro.
+    </p>
+
+    <a
+      href="https://wa.me/57XXXXXXXXXX?text=Hola,%20quiero%20agendar%20una%20visita"
+      class="mt-6 inline-block bg-white text-primary px-6 py-3 rounded-xl shadow-md hover:scale-105 transition"
+    >
+      Agendar visita
+    </a>
+  </div>
+</section>

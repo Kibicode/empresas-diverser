@@ -1,0 +1,137 @@
+---
+import { faqs } from "../../data/admisiones"
+---
+
+<!-- HERO -->
+<section class="bg-white py-20 text-center">
+  <div class="max-w-2xl mx-auto px-6">
+
+    <h1 class="text-4xl font-heading text-primary font-bold">
+      Proceso de admisión
+    </h1>
+
+    <p class="mt-4 text-text/80">
+      Queremos acompañarte en cada paso para que encuentres el mejor espacio para tu hijo.
+    </p>
+
+    <!-- <a href="https://wa.me/57XXXXXXXXXX"
+       class="mt-6 inline-block bg-primary text-white px-6 py-3 rounded-xl shadow hover:scale-105 transition">
+      Solicitar información
+    </a> -->
+
+  </div>
+</section>
+
+<!-- DIVIDER -->
+<div class="h-[1px] bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
+
+<!-- PROCESO -->
+<section class="bg-bg py-24">
+  <div class="max-w-5xl mx-auto px-6">
+
+    <div class="text-center">
+      <h2 class="text-3xl font-heading text-primary font-bold">
+        ¿Cómo funciona?
+      </h2>
+    </div>
+
+    <div class="mt-16 space-y-12">
+
+      {
+        [
+          { paso: "1", titulo: "Contáctanos", desc: "Escríbenos por WhatsApp o formulario." },
+          { paso: "2", titulo: "Agenda una visita", desc: "Conoce nuestras instalaciones." },
+          { paso: "3", titulo: "Evaluación y entrevista", desc: "Entendemos las necesidades del niño." },
+          { paso: "4", titulo: "Matrícula", desc: "Formaliza el proceso y asegura tu cupo." }
+        ].map((item, i) => (
+          <div class="flex items-start gap-6">
+
+            <!-- Número -->
+            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold">
+              {item.paso}
+            </div>
+
+            <!-- Texto -->
+            <div>
+              <h3 class="font-semibold text-lg">{item.titulo}</h3>
+              <p class="text-text/70">{item.desc}</p>
+            </div>
+
+          </div>
+        ))
+      }
+
+    </div>
+
+  </div>
+</section>
+
+<!-- REQUISITOS -->
+<section class="bg-white py-24">
+  <div class="max-w-5xl mx-auto px-6">
+
+    <div class="text-center">
+      <h2 class="text-3xl font-heading text-primary font-bold">
+        Requisitos
+      </h2>
+    </div>
+
+    <ul class="mt-12 grid md:grid-cols-2 gap-6 text-text/80">
+      <li>Registro civil del niño</li>
+      <li>Copia documento de identidad acudiente</li>
+      <li>Certificado médico</li>
+      <li>Carnet de vacunas</li>
+      <li>Fotos recientes</li>
+      <li>Formulario de inscripción</li>
+    </ul>
+
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="bg-bg py-24">
+  <div class="max-w-5xl mx-auto px-6">
+
+    <div class="text-center">
+      <h2 class="text-3xl font-heading text-primary font-bold">
+        Preguntas frecuentes
+      </h2>
+    </div>
+
+    <div class="mt-12 space-y-6">
+
+      {
+        faqs.map((faq) => (
+          <div class="bg-white p-6 rounded-xl shadow">
+
+            <h3 class="font-semibold">{faq.pregunta}</h3>
+            <p class="mt-2 text-text/70">{faq.respuesta}</p>
+
+          </div>
+        ))
+      }
+
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="bg-primary py-20 text-center text-white">
+  <div class="max-w-xl mx-auto px-6">
+
+    <h3 class="text-3xl font-bold">
+      ¿Listo para comenzar?
+    </h3>
+
+    <p class="mt-4 text-white/80">
+      Agenda tu visita y asegura tu cupo.
+    </p>
+
+    <a href="https://wa.me/57XXXXXXXXXX"
+       class="mt-6 inline-block bg-white text-primary px-6 py-3 rounded-xl font-semibold hover:scale-105 transition">
+      Agendar visita
+    </a>
+
+  </div>
+</section>

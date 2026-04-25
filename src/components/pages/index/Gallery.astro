@@ -1,0 +1,28 @@
+---
+import { galeria } from "../../../data";
+import Paperclip from "../../commons/Paperclip.astro";
+import PhotoSlider from "../../commons/PhotoSlider.astro";
+---
+
+<div
+  class="relative py-20 bg-cover bg-center"
+  style="background-image: url('/bg-corcho.jpg')"
+>
+  <div class="absolute inset-0 bg-black/10"></div>
+
+  <div class="relative text-center">
+    <Paperclip index="3" />
+    <h2
+      class="inline-block text-4xl font-heading
+               bg-white/90 text-primary px-6 py-3 rounded-xl shadow-xl"
+    >
+      Pequeños momentos, grandes aprendizajes
+    </h2>
+  </div>
+
+  <PhotoSlider
+    imagenes={galeria}
+    duration="2000"
+    classes="mt-12 grid grid-cols-2 md:grid-cols-3 gap-10 justify-items-center"
+  />
+</div>

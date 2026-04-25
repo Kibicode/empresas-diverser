@@ -1,0 +1,44 @@
+---
+import Paperclip from "../commons/Paperclip.astro";
+
+interface Props {
+  calificacion: number;
+  comentario: string;
+  nombre: string;
+  titulo: string;
+  index: number;
+}
+
+const { calificacion, comentario, nombre, titulo, index } = Astro.props;
+
+let calificacionVisual = "";
+for (let i = 0; i <= calificacion; i++) {
+  calificacionVisual += "★";
+}
+---
+
+<!-- Repite con variaciones -->
+<div class="relative group">
+  <!-- Clip -->
+  <Paperclip index={index % 4} />
+
+  <div
+    class="bg-white rounded-2xl p-8 pt-12 shadow-md group-hover:shadow-xl transition"
+  >
+    <div class="flex justify-center text-accent-yellow">
+      {calificacionVisual}
+    </div>
+
+    <p class="mt-4 text-sm text-text/80 italic">
+      {comentario}
+    </p>
+
+    <div class="mt-6 flex items-center justify-center gap-3">
+      <!-- <img src="https://picsum.photos/60?random=2" class="w-10 h-10 rounded-full"/> -->
+      <div class="text-left">
+        <p class="text-sm font-semibold">{nombre}</p>
+        <p class="text-xs text-text/60">{titulo}</p>
+      </div>
+    </div>
+  </div>
+</div>

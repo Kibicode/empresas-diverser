@@ -1,0 +1,42 @@
+---
+import Card from '../../commons/Card.astro';
+
+interface Props {
+  items: any;
+}
+
+const { items } = Astro.props;
+---
+
+<section class="py-24 from-primary/5 via-transparent to-transparent">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-20">
+      <h2 class="text-4xl md:text-5xl font-bold text-text mb-4">
+        Nuestros cursos y programas
+      </h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {
+        items.map((servicio) => (
+          <Card
+            icono={servicio.icono}
+            imagen={servicio.imagen}
+            titulo={servicio.titulo}
+            subtitulo={servicio.subtitulo}
+            descripcion={servicio.descripcion}
+            caracteristicas={servicio.caracteristicas}
+            ubicacion={servicio.ubicacion}
+            color={servicio.color}
+          />
+        ))
+      }
+    </div>
+  </div>
+</section>
+<!-- icono: string;
+  imagen: string;
+  titulo: string;
+  descripcion: string;
+  caracteristicas: string[];
+  ubicacion: string;
+  color: string; -->
