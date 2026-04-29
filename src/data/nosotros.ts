@@ -3,14 +3,23 @@ export const data = {
     title: "Cada niño aprende diferente. Aquí lo entendemos.",
     subtitle:
       "Acompañamos su desarrollo con una educación inclusiva, emocional y respetuosa de su ritmo.",
-    image: "/index/hero.jpeg",
+    image: "/index/hero_desktop.jpeg",
   },
-  mision:
-    "Brindar una educación inclusiva y de calidad, promoviendo el desarrollo cognitivo, emocional y social de nuestros estudiantes a través de estrategias pedagógicas innovadoras y un ambiente de respeto y empatía.",
-  vision:
-    "El Centro Educativo Integral DiverSer, busca desde la equidad social cooperar en los procesos de aprendizaje y funcionalidad humana de todos los niños y niñas a nivel nacional, posicionándose en los próximos años como uno de los centros de mayor capacidad operativa, contribuyendo con un servicio de calidad desde todas las áreas que competen al sector educativo.",
-  calidad:
-    "El Centro Educativo Integral DiverSer está comprometido con la atención, apoyo y mejoramiento continuo desde la diversidad y equidad social de los niños en el ámbito pedagógico y terapéutico del sector educativo, dispone de un equipo competente que le permite incrementar la confianza de las familias, cumpliendo sus expectativas, por lo tanto, su interés radica en establecer alianzas estratégicas con ellas en beneficio de la población infantil.",
+  mision: {
+    descripcion:
+      "Brindar una educación inclusiva y de calidad, promoviendo el desarrollo cognitivo, emocional y social de nuestros estudiantes a través de estrategias pedagógicas innovadoras y un ambiente de respeto y empatía.",
+    imagen: "/nosotros/mision.jpeg",
+  },
+  vision: {
+    descripcion:
+      "El Centro Educativo Integral DiverSer, busca desde la equidad social cooperar en los procesos de aprendizaje y funcionalidad humana de todos los niños y niñas a nivel nacional, posicionándose en los próximos años como uno de los centros de mayor capacidad operativa, contribuyendo con un servicio de calidad desde todas las áreas que competen al sector educativo.",
+    imagen: "/nosotros/vision.jpeg",
+  },
+  calidad: {
+    descripcion:
+      "En DiverSer, la calidad es nuestro compromiso inquebrantable. Nos esforzamos por ofrecer un entorno educativo inclusivo, innovador y centrado en el desarrollo integral de cada niño. A través de programas personalizados, un equipo altamente capacitado y una cultura de mejora continua, garantizamos que cada estudiante reciba una educación de excelencia que potencie sus habilidades y promueva su bienestar.",
+    imagen: "/nosotros/esencia.jpeg",
+  },
   objetivos: [
     {
       titulo: "Promover la inclusión",
@@ -54,37 +63,37 @@ export const data = {
       nombre: "Inclusión",
       icono: "diversity_3",
       color: "text-sky-600",
-      background: "bg-sky-100"
+      background: "bg-sky-100",
     },
     {
       nombre: "Empatía",
       icono: "favorite",
       color: "text-pink-600",
-      background: "bg-pink-100"
+      background: "bg-pink-100",
     },
     {
       nombre: "Respeto",
       icono: "handshake",
       color: "text-orange-600",
-      background: "bg-orange-100"
+      background: "bg-orange-100",
     },
     {
       nombre: "Innovación",
       icono: "lightbulb",
       color: "text-yellow-500",
-      background: "bg-yellow-100"
+      background: "bg-yellow-100",
     },
     {
       nombre: "Trabajo en equipo",
       icono: "groups",
       color: "text-green-500",
-      background: "bg-green-100"
+      background: "bg-green-100",
     },
     {
       nombre: "Compromiso",
       icono: "emoji_events",
       color: "text-purple-500",
-      background: "bg-purple-100"
+      background: "bg-purple-100",
     },
   ],
   personal: [

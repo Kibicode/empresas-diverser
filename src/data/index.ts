@@ -2,7 +2,8 @@ export const homeData = {
   hero: {
     title: "No hay un solo camino para aprender",
     subtitle: "En Diverser descubrimos y acompañamos el de cada niño y niña.",
-    image: "/index/hero.jpeg",
+    image_desktop: "/index/hero_desktop.jpeg",
+    image_mobile: "/index/hero_mobile.png",
   },
 
   //TODO: Focus fix

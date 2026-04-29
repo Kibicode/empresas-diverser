@@ -20,6 +20,7 @@
     "astro-splide": "^2.0.2",
     "astro-swiper": "^1.4.0",
     "install": "^0.13.0",
+    "lucide": "^1.12.0",
     "sharp": "^0.34.5",
     "tailwindcss": "^4.1.18",
     "typescript": "^6.0.3"
