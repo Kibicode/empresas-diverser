@@ -6,7 +6,7 @@ interface Props {
     image_mobile?: string;
 }
 
-const { title, subtitle, image_desktop, image_mobile } = Astro.props;
+const { image_desktop, image_mobile } = Astro.props;
 ---
 
 <!-- Simplified Hero Section -->
@@ -17,7 +17,7 @@ const { title, subtitle, image_desktop, image_mobile } = Astro.props;
       {image_mobile && <source media="(max-width: 768px)" srcset={image_mobile} />}
       <img
         alt="Modern high-end school library"
-        class="w-full h-[calc(100vh-5em)] object-center md:object-cover"
+        class="w-full h-[calc(100vh-5em)] object-cover md:object-cover"
         src={image_desktop}
       />
     </picture>
