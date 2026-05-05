@@ -9,22 +9,26 @@ interface Props {
 const { image_desktop, image_mobile } = Astro.props;
 ---
 
-<!-- Simplified Hero Section -->
-<main class="relative h-screen w-full max-h-[calc(100vh-5em)] flex items-end pt-20">
-  <!-- Background Layer -->
+<!-- HERO -->
+<main class="relative w-full h-screen md:h-[calc(100vh-5rem)] flex items-end">
+
+  <!-- Background -->
   <div class="absolute inset-0 -z-10">
     <picture>
-      {image_mobile && <source media="(max-width: 768px)" srcset={image_mobile} />}
+      {image_mobile && (
+        <source media="(max-width: 768px)" srcset={image_mobile} />
+      )}
       <img
-        alt="Modern high-end school library"
-        class="w-full h-[calc(100vh-5em)] object-cover md:object-cover"
         src={image_desktop}
+        alt="Hero imagen"
+        class="w-full h-full object-cover object-[50%_10%]"
       />
     </picture>
   </div>
-  <!-- Content Area -->
-  <div
-    class="container mx-auto pb-16 md:pb-24 flex flex-col md:flex-row justify-between items-end gap-12 relative"
-  >
+
+  <!-- Content -->
+  <div class="max-w-7xl mx-auto px-6 pb-16 md:pb-24 w-full">
+    <!-- tu contenido -->
   </div>
+
 </main>

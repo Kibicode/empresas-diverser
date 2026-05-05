@@ -77,13 +77,13 @@ export const actividades = [
   },
   {
     icono: "favorite",
-    titulo: "Terapia conductual",
+    titulo: "Terapia conductual pedagógica",
     descripcion:
       "Fortalecemos habilidades emocionales y conductuales promoviendo el autocontrol y la convivencia.",
   },
   {
     icono: "pan_tool",
-    titulo: "Terapia ocupacional",
+    titulo: "Terapia ocupacional pedagógica",
     descripcion:
       "Desarrollamos habilidades motoras y de autonomía necesarias para la vida diaria y escolar.",
   },

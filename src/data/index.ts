@@ -70,22 +70,47 @@ export const colors = ["#5FC2A7", "#4CB7BE", "#F2D34F", "#F48A9A"];
 export const testimoniales = [
   {
     calificacion: 5,
-    comentario: "Me gusta",
+    comentario: "La dedicación, el empeño con el que hacen el trabajo, el amor que les brindan a mi hijo y sobre todo el acompañamiento que han tenido a lo largo del camino, muchas gracias familia Diverser.",
     nombre: "Papito 1",
     titulo: "Papa",
   },
   {
     calificacion: 5,
-    comentario: "",
-    nombre: "",
-    titulo: "",
+    comentario: "Valoro cada uno de los esfuerzos de las profes hacia la institución y nuestros niños.",
+    nombre: "Papito 1",
+    titulo: "Papa",
   },
   {
     calificacion: 5,
-    comentario: "",
-    nombre: "",
-    titulo: "",
+    comentario: "El amor y entrega que tienen por cada niño, la forma de guiarlos, enseñarles y la paciencia que tienen, es increíble, es un lugar que se enfoca en comprender las necesidades de cada niño.",
+    nombre: "Papito 1",
+    titulo: "Papa",
   },
+  {
+    calificacion: 5,
+    comentario: "La persistencia y el amor que tiene con cada niño.",
+    nombre: "Papito 1",
+    titulo: "Papa",
+  },
+  {
+    calificacion: 5,
+    comentario: "Comunicación y respuesta sobre mi hija. El amor y dedicación hacia cada uno de los niños que hacen parte de la institución.",
+    nombre: "Papito 1",
+    titulo: "Papa",
+  },
+  {
+    calificacion: 5,
+    comentario: "La calidez del equipo, la paciencia de las docentes con los niños, el profesionalismo.",
+    nombre: "Papito 1",
+    titulo: "Papa",
+  },
+  {
+    calificacion: 5,
+    comentario: "La amabilidad, empatia y compromiso que tienen con los niños.",
+    nombre: "Papito 1",
+    titulo: "Papa",
+  },
+  
 ];
 
 export const galeria = [

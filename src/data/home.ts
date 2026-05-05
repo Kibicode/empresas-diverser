@@ -67,25 +67,3 @@ export const homeData = {
 };
 
 export const colors = ["#5FC2A7", "#4CB7BE","#F2D34F", "#F48A9A", ]
-
-export const testimoniales = [
-  {
-    calificacion: 5,
-    comentario: "Me gusta",
-    nombre: "Papito 1",
-    titulo: "Papa"
-  },
-  {
-    calificacion: 5,
-    comentario: "",
-    nombre: "",
-    titulo: ""
-  },
-  {
-    calificacion: 5,
-    comentario: "",
-    nombre: "",
-    titulo: ""
-  },
-
-]
