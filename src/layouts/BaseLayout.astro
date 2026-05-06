@@ -1,12 +1,10 @@
 ---
-
 import Navbar from "../components/commons/Navbar.astro";
 import Footer from "../components/commons/Footer.astro";
 import WhatsappButton from "../components/commons/Whatsapp_button.astro";
 import "../styles/global.css";
 
 const { title, description } = Astro.props;
-
 ---
 
 <!doctype html>
@@ -32,20 +30,22 @@ const { title, description } = Astro.props;
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
       rel="stylesheet"
     />
-    <script type="application/ld+json">
-    {JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "School",
-      "name": "DiverSer Centro Educativo Integral",
-      "url": Astro.site,
-      "description": "Jardín infantil en Girardot enfocado en el desarrollo integral de los niños.",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Girardot",
-        "addressCountry": "CO"
-      }
-    })}
-    </script>
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "School",
+        name: "DiverSer Centro Educativo Integral",
+        url: Astro.site,
+        description:
+          "Jardín infantil en Girardot enfocado en el desarrollo integral de los niños.",
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Girardot",
+          addressCountry: "CO",
+        },
+      })}
+    />
   </head>
 
   <body class="bg-bg text-text font-body h-screen">
@@ -53,7 +53,7 @@ const { title, description } = Astro.props;
     <main class="relative overflow-hidden">
       <!-- Imagen de fondo -->
       <div
-        class="bg-[url('/bg_clips.png')] md:bg-[url('/bg_clips.png  ')]
+        class="bg-[url('/bg_clips.png')] md:bg-[url('/bg_clips.png ')]
         fixed inset-0 -z-10 bg-repeat opacity-10"
         aria-hidden="true"
       >
