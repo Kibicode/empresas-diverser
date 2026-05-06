@@ -21,8 +21,7 @@ const { title, description } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
-    <!-- //TODO: QUitar comentario -->
-    <!-- <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} /> -->
+    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
     <meta name="robots" content="index, follow" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
@@ -33,6 +32,20 @@ const { title, description } = Astro.props;
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
       rel="stylesheet"
     />
+    <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "School",
+      "name": "DiverSer Centro Educativo Integral",
+      "url": Astro.site,
+      "description": "Jardín infantil en Girardot enfocado en el desarrollo integral de los niños.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Girardot",
+        "addressCountry": "CO"
+      }
+    })}
+    </script>
   </head>
 
   <body class="bg-bg text-text font-body h-screen">

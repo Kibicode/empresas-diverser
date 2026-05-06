@@ -1,5 +1,4 @@
 ---
-
 import BaseLayout from "../layouts/BaseLayout.astro";
 
 import { homeData } from "../data/index";
@@ -9,18 +8,27 @@ import Gallery from "../components/pages/index/Gallery.astro";
 import Hero from "../components/pages/index/Hero.astro";
 import Programs from "../components/pages/index/Programs.astro";
 import Testimonials from "../components/pages/index/Testimonials.astro";
-
-
 ---
 
 <BaseLayout
-  title="DiverSer | Centro Educativo Integral en Girardot"
+  title="DiverSer | Centro Educativo Integral | Jardín Infantil en Girardot"
   description="Educación inclusiva para niños en fase preescolar. Desarrollo integral, acompañamiento emocional y aprendizaje activo."
 >
   <Hero {...homeData.hero} />
-  <Diff></Diff>
+  <Diff />
   <Programs items={homeData.programs} />
-  <Testimonials ></Testimonials>
-  <Gallery></Gallery>
-  <Cta/>
+  <Testimonials />
+  <Gallery />
+  <Cta />
+  <section
+    class="sr-only max-w-4xl mx-auto px-6 py-16 text-sm text-text/70 leading-relaxed"
+  >
+    <p>
+      DiverSer es un centro educativo integral ubicado en Girardot, enfocado en
+      el desarrollo infantil desde una mirada emocional, pedagógica y social.
+      Nuestro jardín infantil acompaña a los niños en sus primeras etapas,
+      promoviendo el aprendizaje a través de experiencias significativas, el
+      juego y el respeto por los ritmos individuales.
+    </p>
+  </section>
 </BaseLayout>

@@ -1,9 +1,9 @@
 ---
 interface Props {
-    title: string;
-    subtitle: string;
-    image_desktop: string;
-    image_mobile?: string;
+  title: string;
+  subtitle: string;
+  image_desktop: string;
+  image_mobile?: string;
 }
 
 const { image_desktop, image_mobile } = Astro.props;
@@ -11,13 +11,14 @@ const { image_desktop, image_mobile } = Astro.props;
 
 <!-- HERO -->
 <main class="relative w-full h-screen md:h-[calc(100vh-5rem)] flex items-end">
-
   <!-- Background -->
   <div class="absolute inset-0 -z-10">
     <picture>
-      {image_mobile && (
-        <source media="(max-width: 768px)" srcset={image_mobile} />
-      )}
+      {
+        image_mobile && (
+          <source media="(max-width: 768px)" srcset={image_mobile} />
+        )
+      }
       <img
         src={image_desktop}
         alt="Hero imagen"
@@ -26,9 +27,25 @@ const { image_desktop, image_mobile } = Astro.props;
     </picture>
   </div>
 
+  <div>
+    <h1 class="text-4xl md:text-5xl font-heading text-white sr-only">
+      Centro Educativo Integral Diverser
+    </h1>
+
+    <p class="mt-4 text-white/90 max-w-xl sr-only">
+      Acompañamos el desarrollo de cada niño desde el respeto, la empatía y el
+      aprendizaje significativo.
+    </p>
+
+    <!-- SEO oculto -->
+    <h2 class="sr-only">
+      Jardín infantil en Girardot con enfoque integral y acompañamiento
+      personalizado
+    </h2>
+  </div>
+
   <!-- Content -->
   <div class="max-w-7xl mx-auto px-6 pb-16 md:pb-24 w-full">
     <!-- tu contenido -->
   </div>
-
 </main>
