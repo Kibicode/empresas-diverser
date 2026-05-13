@@ -112,7 +112,7 @@ export const data = {
     {
       nombre: `Jessica Arias Navarro`,
       cargo: `Coordinadora`,
-      experiencia: `Licenciada en pedagogía infantil, especialista en educación inclusiva, terapeuta en integración sensorial pedagógica.`,
+      experiencia: `Licenciada en pedagogía infantil, especialista en educación inclusiva, terapeuta en ocupacional pedagógica.`,
       foto: `/nosotros/personal/jessica.jpg`,
     },
   ],

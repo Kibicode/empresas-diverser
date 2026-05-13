@@ -34,7 +34,7 @@ const { title, description } = Astro.props;
       type="application/ld+json"
       set:html={JSON.stringify({
         "@context": "https://schema.org",
-        "@type": "School",
+        "@type": ["School", "EducationalOrganization", "Preschool"],
         name: "DiverSer Centro Educativo Integral",
         url: Astro.site,
         description:
