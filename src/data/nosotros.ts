@@ -106,7 +106,7 @@ export const data = {
     {
       nombre: `Carlos Alberto Durán`,
       cargo: `Coordinador gestión de calidad y terapeuta canino`,
-      experiencia: `Médico Veterinario, especialista en bienestar animal y etnología, auditor interno y terapeuta en intervención asistida con animales.`,
+      experiencia: `Médico Veterinario, especialista en bienestar animal y etología, auditor interno y terapeuta en intervención asistida con animales.`,
       foto: `/nosotros/personal/carlos.jpg`,
     },
     {
